@@ -2,8 +2,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-ruby-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    autoprefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat');
+    autoprefixer = require('gulp-autoprefixer');
 
 //Paths
 var scssSource = 'components/scss/',
@@ -24,6 +23,5 @@ gulp.task('sass', function () {
 gulp.task('default', ['sass']);
 
 gulp.task('watch', function() {
-  gulp.watch(scssSource + '*.scss', ['sass']);
-  gulp.watch(jsSources + '*.js', ['js']);
+  gulp.watch(scssSource + 'modules/*.scss', ['sass']);
 })
